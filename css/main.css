@@ -63,7 +63,6 @@ header h1 {
           box-shadow: 0 4px 10px -2px rgba(80,80,80,0.6);
 }
 
-
 /* Photobooth button */
 
 button#start {
@@ -82,6 +81,11 @@ button#start i {
   margin-right: 8px;
 }
 
+button.disabled {
+  cursor: default;
+  filter: alpha(opacity=0.65);
+  opacity: 0.65;
+}
 
 /* Blank screen */
 
