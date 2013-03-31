@@ -15,7 +15,7 @@ var photobooth = {
       // successCallback
       function(localMediaStream) {
         var video = $('video');
-        video.width('580px');
+        video.width('585px');
         $('.blank').remove();
         video.attr('src', window.URL.createObjectURL(localMediaStream));
         photobooth.videoStream = true;
