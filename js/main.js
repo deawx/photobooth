@@ -34,6 +34,15 @@ var photobooth = {
         }
       }
     );
+  },
+  
+  snapshot: function() {
+    var video = document.querySelector('video');
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, 284, 204);
+    $('<li><img src="' + canvas.toDataURL('image/webp') + '"></li>')
+     .appendTo($('#strip'));
   }
 }
 
