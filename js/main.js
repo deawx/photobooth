@@ -82,14 +82,14 @@ var photobooth = {
                             
                             // stop video
                             streamObject.stop();
-                            $('video').removeAttr('src');
-                            
+                            $('video').removeAttr('src').width('0px');
+                                                        
                             // reset stuff
                             $('.countdown').empty();
                             photobooth.canvas2y = 10;
-                            $('#start').prop('disabled', false).attr('class', 'not');
                             
                             // put up download instructions
+                            $('#start').prop('disabled', false).removeAttr('class');
                             $('.download-btn').html('<button id="download"><i class="icon-download"></i>Download</button>');
                             $('<div class="instructions"><h2>Download your photostrip</h2><ol><li>Click the <span class="btn"><i class="icon-download"></i>Download</span> button below to download your photostrip</li> <li>When the Save file box opens, change the file name from "download" to something better like "photostrip.png". <ul><li><span class="strong">Note:</span> The image is a PNG file, so make sure your file name ends with ".png"</li></ul></li></ol></div>').insertAfter('.countdown');
                           }
@@ -117,11 +117,15 @@ var photobooth = {
   }
 }
 
-$('#start').click(function() {
-  $('#strip').empty();
-  $('button').prop('disabled', true).attr('class', 'disabled');
-  photobooth.stream();
-});
+$(document).on({
+  click: function(e) {
+    $('#strip').empty();
+    $('.instructions').remove();
+    $('.download-btn').empty();
+    $('button').prop('disabled', true).attr('class', 'disabled');
+    photobooth.stream();
+  }
+}, '#start');
 
 $(document).on({
   click: function(e) {
