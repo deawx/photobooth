@@ -52,6 +52,7 @@ header h1 {
 /* Photobooth window */
 
 .photobooth {
+  position: relative;
   width: 585px;
   height: 440px;
   border-style: solid;
@@ -85,6 +86,15 @@ button.disabled {
   cursor: default;
   filter: alpha(opacity=0.65);
   opacity: 0.65;
+}
+
+.countdown {
+  position: absolute;
+  left: -80px;
+  top: 15px;
+  z-index: 5;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
 }
 
 /* Blank screen */
