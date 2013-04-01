@@ -78,7 +78,8 @@ button#start {
   font-size: 1.3em;
 }
 
-button#start i {
+button#start i,
+button#download i {
   margin-right: 8px;
 }
 
@@ -99,12 +100,14 @@ button.disabled {
 
 /* Blank screen */
 
-.blank {
+.blank,
+.instructions {
   padding: 25px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.blank h2 {
+.blank h2,
+.instructions h2 {
   font-size: 1.2em;
   font-weight: 400;
 }
@@ -119,21 +122,25 @@ span.btn {
   border: 1px solid #a4a4a4;
 }
 
-.blank ol {
+.blank ol,
+.instructions ol {
   font-size: 1.1em;
   font-weight: 300;
 }
 
-.blank ul {
+.blank ul,
+.instructions ul {
   list-style-type: none;
   font-size: 0.9em;
 }
 
-.blank ul li {
+.blank ul li
+.instructions ul li {
   margin-top: 5px;
 }
 
-.blank ol li:nth-child(n+2) {
+.blank ol li:nth-child(n+2),
+.instructions ol li:nth-child(n+2) {
   margin-top: 10px;
 }
 
@@ -152,4 +159,16 @@ span.btn {
   border-style: solid;
   border-width: 3px;
   border-color: white;
+}
+
+button#download {
+  height: 40px;
+  width: 150px;
+  margin-top: 13px;
+  
+  font-family: "BebasNeueRegular", sans-serif;
+  color: #3e3e3e;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.3em;
 }

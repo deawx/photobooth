@@ -34,16 +34,22 @@
           </div>
           <video class="stream" autoplay></video>
           <canvas id="canvas" width="284px" height="204px" style="display:none">
+          <canvas id="canvas2" width="324px" height="866px" style="display:none">
         </div>
         <button id="start"><i class="icon-camera"></i> Start</button>
       </div>
       <div class="strip right">
         <ul id="strip"></ul>
+        <div class="download-btn"></div>
       </div>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/vendor/html2canvas.js"></script>
+    <script src="js/vendor/jquery.plugin.html2canvas.js"></script>
+    <script src="js/vendor/canvas2image.js"></script>
+    <script src="js/vendor/base64.js"></script>     
     <script src="js/main.js"></script>
   </body>
 </html>
